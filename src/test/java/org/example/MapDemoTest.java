@@ -87,10 +87,23 @@ class MapDemoTest {
         result.put(20,humanList2);
         result.put(30, humanList3);
         assertEquals(integerListMap, result);
+    }
 
+    @Test
+    void getSortedStudent() {
+        Set<Human> humanSet = new LinkedHashSet<>();
+        humanSet.add(new Human("Иван", "Иванов", "Иванович", 10));
+        humanSet.add(new Human("Влад", "Смирнов", "Иванович", 10));
+        humanSet.add(new Human("Иван", "Чирков", "Иванович", 20));
+        humanSet.add(new Human("Иван", "Петров", "Иванович", 20));
+        humanSet.add(new Human("Иван", "Смирнов", "Иванович", 30));
+        TreeSet<Human> humanTreeSet = MapDemo.getSortedStudent(humanSet);
 
-
-
-
+        Iterator <Human> iterator = humanTreeSet.iterator();
+        assertEquals("Иванов Иван Иванович", iterator.next().getFIO());
+        assertEquals("Петров Иван Иванович", iterator.next().getFIO());
+        assertEquals("Смирнов Влад Иванович", iterator.next().getFIO());
+        assertEquals("Смирнов Иван Иванович", iterator.next().getFIO());
+        assertEquals("Чирков Иван Иванович", iterator.next().getFIO());
     }
 }

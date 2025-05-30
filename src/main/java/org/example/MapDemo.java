@@ -47,4 +47,11 @@ public class MapDemo {
         }
         return result;
     }
+    public static TreeSet<Human> getSortedStudent(Set<Human> humanSet){
+        TreeSet<Human> treeSet = new TreeSet<>(new FIOComparator());
+        treeSet.addAll(humanSet);
+        return treeSet;
+
+    }
+
 }

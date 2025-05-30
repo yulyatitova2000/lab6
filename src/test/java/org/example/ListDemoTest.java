@@ -52,18 +52,6 @@ class ListDemoTest {
         a.add(4);
         a.add(41);
         a.add(43);
-        a.add(44);
-        a.add(45);
-        a.add(46);
-        a.add(47);
-        a.add(48);
-        a.add(49);
-        a.add(444);
-        a.add(1444);
-        a.add(2444);
-        a.add(3444);
-        a.add(4444);
-        a.add(5444);
         for (Integer item: a){
             System.out.print(item + " ");
         }

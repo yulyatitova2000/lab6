@@ -47,6 +47,10 @@ public class Human {
         this.age = age;
     }
 
+    public String getFIO() {
+        return lastName + ' ' + firstName + ' ' + surName;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
