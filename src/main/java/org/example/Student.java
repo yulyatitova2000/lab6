@@ -19,23 +19,23 @@ public class Student extends  Human{
     }
 
     @Override
-    public boolean equals(Object object) {
-        if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
-        if (!super.equals(object)) return false;
-        Student student = (Student) object;
+    public String toString() {
+        return "Student{" +
+                "faculty='" + faculty + '\'' +
+                "} " + super.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Student student = (Student) o;
         return Objects.equals(faculty, student.faculty);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), faculty);
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "faculty='" + faculty + '\'' +
-                "} " + super.toString();
     }
 }
